@@ -4,5 +4,8 @@
   "displayName": "Core Framework",
   "unity": "6000.3",
   "description": "Reusable architecture base for my Unity projects",
-  "hideInEditor": false
+  "hideInEditor": false,
+  "dependencies": {
+    "jp.hadashikick.vcontainer": "1.17.0"
+  }
 }
