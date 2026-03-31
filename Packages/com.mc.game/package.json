@@ -6,6 +6,6 @@
   "description": "Reusable architecture base for my Unity projects",
   "hideInEditor": false,
   "dependencies": {
-    "com.mc.core": "*"
+    "com.mc.core": "https://github.com/moretech1402/my-unity-packages.git?path=/Packages/com.mc.core"
   }
 }
