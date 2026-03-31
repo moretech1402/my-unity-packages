@@ -5,7 +5,5 @@
   "unity": "6000.3",
   "description": "Reusable architecture base for my Unity projects",
   "hideInEditor": false,
-  "dependencies": {
-    "jp.hadashikick.vcontainer": "https://github.com/hadashiA/VContainer.git?path=/VContainer/Assets/VContainer"
-  }
+  "documentationUrl": "https://github.com/moretech1402/my-unity-packages/tree/main/Packages/com.mc.core"
 }
