@@ -6,6 +6,6 @@
   "description": "Reusable architecture base for my Unity projects",
   "hideInEditor": false,
   "dependencies": {
-    "com.mc.core": "*"
+    "com.mc.core": "0.1.0"
   }
 }
