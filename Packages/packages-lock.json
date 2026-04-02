@@ -7,7 +7,7 @@
       "dependencies": {}
     },
     "com.mc.game": {
-      "version": "file:Game Framework",
+      "version": "file:com.mc.game",
       "depth": 0,
       "source": "embedded",
       "dependencies": {
