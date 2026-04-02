@@ -11,7 +11,8 @@
       "depth": 0,
       "source": "embedded",
       "dependencies": {
-        "com.mc.core": "*"
+        "com.mc.core": "https://github.com/moretech1402/my-unity-packages.git?path=/Packages/com.mc.core",
+        "jp.hadashikick.vcontainer": "1.17.0"
       }
     },
     "com.unity.ai.navigation": {
@@ -208,11 +209,11 @@
       "url": "https://packages.unity.com"
     },
     "jp.hadashikick.vcontainer": {
-      "version": "1.17.0",
+      "version": "https://github.com/hadashiA/VContainer.git?path=/VContainer/Assets/VContainer",
       "depth": 0,
-      "source": "registry",
+      "source": "git",
       "dependencies": {},
-      "url": "https://package.openupm.com"
+      "hash": "ae12048ca8fb9900518f40bb691bca5266efc760"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
