@@ -7,7 +7,7 @@ namespace MC.Game.Stats
 {
     public class StatsHandler : IStatsHandler
     {
-        private readonly Dictionary<StatId, Stat> _stats = new();
+        private readonly Dictionary<StatId, Stat> _stats;
 
         public StatsHandler(Dictionary<StatId, Stat> stats)
         {
@@ -32,15 +32,12 @@ namespace MC.Game.Stats
 
         public float Get(StatId statId, IStatCalculation calculation)
         {
-            if (!_stats.TryGetValue(statId, out var stat))
-                return 0f;
-
-            return calculation.Calculate(stat, this);
+            return !_stats.TryGetValue(statId, out var stat) ? 0f : calculation.Calculate(stat, this);
         }
 
         public Stat GetStat(StatId statId)
         {
-            return _stats.TryGetValue(statId, out var stat) ? stat : null;
+            return _stats.GetValueOrDefault(statId);
         }
     }
 }

@@ -1,7 +1,7 @@
 {
   "name": "com.mc.game",
-  "version": "0.1.0",
-  "displayName": "Game Framework",
+  "version": "0.2.0",
+  "displayName": "MoreC Game Framework",
   "unity": "6000.3",
   "description": "Reusable architecture base for my Unity projects",
   "hideInEditor": false,
