@@ -37,7 +37,7 @@ namespace MC.Game.Stats
 
         public Stat GetStat(StatId statId)
         {
-            return _stats.TryGetValue(statId, out var stat) ? stat : null;
+            return _stats.GetValueOrDefault(statId);
         }
     }
 }
