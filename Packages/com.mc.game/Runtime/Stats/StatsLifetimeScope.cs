@@ -1,4 +1,5 @@
-﻿using VContainer;
+﻿using MC.Core.Stats;
+using VContainer;
 using VContainer.Unity;
 
 namespace MC.Game.Stats
