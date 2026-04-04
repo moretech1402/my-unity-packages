@@ -18,7 +18,7 @@ namespace MC.Core.Stats
 
     [CreateAssetMenu(
         fileName = "StatsContainerSO",
-        menuName = "Game/Stats/Create Stats Container"
+        menuName = "Core/Stats/Create Stats Container"
     )]
     public class StatsContainerSo : ScriptableObject
     {
