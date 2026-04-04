@@ -30,9 +30,9 @@ namespace MC.Core.Stats
             Modifiers = new List<IStatModifier>();
         }
 
-        public void AddModifier(IStatModifier modifier) => Modifiers.Add(modifier);
+        internal void AddModifier(IStatModifier modifier) => Modifiers.Add(modifier);
 
-        public void RemoveModifier(IStatModifier modifier) => Modifiers.Remove(modifier);
+        internal void RemoveModifier(IStatModifier modifier) => Modifiers.Remove(modifier);
 
     }
 }
