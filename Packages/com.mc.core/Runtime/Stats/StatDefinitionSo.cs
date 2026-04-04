@@ -10,11 +10,13 @@ namespace MC.Core.Stats
         [SerializeField] private string _name;
         [SerializeField] private StatSourceSo _source;
         
+        public StatSourceSo Source => _source;
+        
         public StatId Id => new StatId(_id);
 
         public Stat Create()
         {
-            return new Stat(_source.Create());
+            return new Stat(_source.DefaultCreate());
         }
     }
 }

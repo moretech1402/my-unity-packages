@@ -32,10 +32,11 @@ namespace MC.Game.Stats
 
         public float Get(StatId statId, IStatCalculation calculation)
         {
-            return !_stats.TryGetValue(statId, out var stat) ? 0f : calculation.Calculate(stat, this);
+            var stat = GetStat(statId);
+            return stat != null ? calculation.Calculate(stat, this) : 0f;
         }
 
-        public Stat GetStat(StatId statId)
+        private Stat GetStat(StatId statId)
         {
             return _stats.GetValueOrDefault(statId);
         }

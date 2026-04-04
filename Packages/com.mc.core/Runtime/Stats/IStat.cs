@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using MC.Core.Stats.Modifiers;
 using MC.Core.Stats.Sources;
@@ -9,13 +10,36 @@ namespace MC.Core.Stats
 
     }
 
-    public class StatId
+    public sealed class StatId : IEquatable<StatId>
     {
-        public string Value { get; }
+        private readonly string _value;
 
         public StatId(string id)
         {
-            Value = id;
+            _value = id ?? throw new ArgumentNullException(nameof(id));
+        }
+
+        public bool Equals(StatId other)
+        {
+            if (other is null)
+                return false;
+
+            return _value == other._value;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is StatId other && Equals(other);
+        }
+
+        public override int GetHashCode()
+        {
+            return _value.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return _value;
         }
     }
 

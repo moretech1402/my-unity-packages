@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using MC.Core.Stats.Sources;
 using UnityEngine;
 
 namespace MC.Core.Stats
@@ -14,6 +15,7 @@ namespace MC.Core.Stats
         public int Value => _value;
 
         public StatId Id => Stat.Id;
+        public StatSourceSo Source => Stat.Source;
     }
 
     [CreateAssetMenu(

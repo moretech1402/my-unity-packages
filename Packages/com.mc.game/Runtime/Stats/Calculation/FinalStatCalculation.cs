@@ -1,3 +1,4 @@
+using System.Linq;
 using MC.Core.Stats;
 using MC.Core.Stats.Calculation;
 
@@ -8,11 +9,8 @@ namespace MC.Game.Stats.Calculation
         public float Calculate(Stat stat, IStatsHandler context)
         {
             var finalValue = stat.Source.GetValue(context);
-            foreach (var modifier in stat.Modifiers)
-            {
-                finalValue = modifier.Apply(finalValue);
-            }
-            return finalValue;
+            return stat.Modifiers
+                .Aggregate(finalValue, (current, modifier) => modifier.Apply(current));
         }
     }
 

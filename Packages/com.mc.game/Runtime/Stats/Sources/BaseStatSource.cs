@@ -2,16 +2,16 @@ namespace MC.Core.Stats.Sources
 {
     public class BaseStatSource : IStatSource
     {
-        public float Value { get; set; }
+        private readonly float _value;
 
         public BaseStatSource(float value)
         {
-            Value = value;
+            _value = value;
         }
 
         public float GetValue(IStatsHandler stats)
         {
-            return Value;
+            return _value;
         }
     }
 }
