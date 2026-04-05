@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using MC.Core.Stats;
-using MC.Core.Stats.Modifiers;
 using MC.Core.Stats.Sources;
 using MC.Game.Stats.Modifiers;
 using MC.Game.Stats.Sources;
@@ -20,12 +19,12 @@ namespace MC.Game.Stats
             return new StatsHandler(map);
         }
 
-        public IStatModifier Create(StatModifierData data)
+        public StatModifierEntry Create(StatModifierEntryData entryData)
         {
-            return data.DefaultCreate();
+            return new StatModifierEntry(entryData.StatId, entryData.DefaultModifierCreate());
         }
 
-        public IStatModifier[] Create(StatModifierData[] datas)
+        public StatModifierEntry[] Create(StatModifierEntryData[] datas)
         {
             return datas.Select(Create).ToArray();
         }
