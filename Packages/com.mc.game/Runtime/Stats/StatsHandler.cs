@@ -7,16 +7,16 @@ namespace MC.Game.Stats
 {
     public class StatsHandler : IStatsHandler
     {
-        private readonly Dictionary<StatId, Stat> _stats;
+        public Dictionary<StatId, Stat> Stats { get; }
 
         public StatsHandler(Dictionary<StatId, Stat> stats)
         {
-            _stats = stats;
+            Stats = stats;
         }
 
         public void AddModifier(StatId statId, IStatModifier modifier)
         {
-            if (_stats.TryGetValue(statId, out var stat))
+            if (Stats.TryGetValue(statId, out var stat))
             {
                 stat.AddModifier(modifier);
             }
@@ -24,7 +24,7 @@ namespace MC.Game.Stats
 
         public void RemoveModifier(StatId statId, IStatModifier modifier)
         {
-            if (_stats.TryGetValue(statId, out var stat))
+            if (Stats.TryGetValue(statId, out var stat))
             {
                 stat.RemoveModifier(modifier);
             }
@@ -38,7 +38,7 @@ namespace MC.Game.Stats
 
         private Stat GetStat(StatId statId)
         {
-            return _stats.GetValueOrDefault(statId);
+            return Stats.GetValueOrDefault(statId);
         }
     }
 }
