@@ -21,12 +21,35 @@ namespace MC.Game.Stats
                 stat.AddModifier(modifier);
             }
         }
-
-        public void RemoveModifier(StatId statId, IStatModifier modifier)
+        public void AddModifier(StatModifierEntry entry)
         {
-            if (Stats.TryGetValue(statId, out var stat))
+            if (Stats.TryGetValue(entry.StatId, out var stat))
             {
-                stat.RemoveModifier(modifier);
+                stat.AddModifier(entry.Modifier);
+            }
+        }
+
+        public void AddModifiers(IEnumerable<StatModifierEntry> entries)
+        {
+            foreach (var entry in entries)
+            {
+                AddModifier(entry);
+            }
+        }
+
+        public void RemoveModifier(StatModifierEntry entry)
+        {
+            if (Stats.TryGetValue(entry.StatId, out var stat))
+            {
+                stat.RemoveModifier(entry.Modifier);
+            }
+        }
+        
+        public void RemoveModifiers(StatModifierEntry[] entries)
+        {
+            foreach (var entry in entries)
+            {
+                RemoveModifier(entry);
             }
         }
 

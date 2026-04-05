@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using MC.Core.Stats;
+using MC.Core.Stats.Modifiers;
 using MC.Core.Stats.Sources;
 using MC.Game.Stats.Modifiers;
 using MC.Game.Stats.Sources;

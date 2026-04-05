@@ -8,7 +8,10 @@ namespace MC.Core.Stats
     {
         Dictionary<StatId, Stat> Stats { get; }
         float Get(StatId statId, IStatCalculation calculation);
-        void AddModifier(StatId statId, IStatModifier modifier);
+        void AddModifier(StatModifierEntry entry);
+        void AddModifiers(IEnumerable<StatModifierEntry> entries);
+        public void RemoveModifier(StatModifierEntry entry);
+        public void RemoveModifiers(StatModifierEntry[] entries);
     }
 
 }

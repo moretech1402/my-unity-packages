@@ -1,11 +1,11 @@
 using System;
+using MC.Core;
 using MC.Core.Events;
 using MC.Core.Unity.Inputs;
 using MC.Core.Unity.Inputs.Events;
 using MC.Core.Unity.Movement;
 using UnityEngine;
 using UnityEngine.Events;
-using VContainer;
 
 namespace MC.Game.Movement
 {
@@ -29,15 +29,11 @@ namespace MC.Game.Movement
         private Action<JumpInputEvent> _onJumpDelegate;
         private Action<RunInputEvent> _onRunDelegate;
         private Action<InputActionEvent> _onAttackDelegate;
-        
-        [Inject]
-        public void Construct(IEventBus eventBus)
-        {
-            _eventBus = eventBus;
-        }
 
         private void OnEnable()
         {
+            _eventBus = ServiceLocator.Get<IEventBus>();
+            
             _onMoveDelegate = OnMoveInput;
             _onJumpDelegate = Jump;
             _onRunDelegate = Run;
