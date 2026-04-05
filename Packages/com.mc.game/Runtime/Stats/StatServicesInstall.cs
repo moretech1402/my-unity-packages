@@ -1,7 +1,6 @@
 ﻿using MC.Core.Stats;
 using MC.Core.Unity;
 using UnityEngine;
-using IStatsFactory = MC.Core.Stats.IStatsFactory;
 
 namespace MC.Game.Stats
 {
