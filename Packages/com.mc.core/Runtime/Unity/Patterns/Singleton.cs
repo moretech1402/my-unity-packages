@@ -23,10 +23,10 @@ namespace MC.Core.Unity.Patterns
             }
         }
 
-        private void CreateSingletonInstance()
+        private static void CreateSingletonInstance()
         {
-            GameObject singletonGO = new(typeof(T).Name + " Singleton");
-            Instance = singletonGO.AddComponent<T>();
+            GameObject singletonGo = new(typeof(T).Name + " Singleton");
+            Instance = singletonGo.AddComponent<T>();
             Debug.LogWarning($"[Singleton] Instance of {typeof(T)} auto-created.");
         }
     }

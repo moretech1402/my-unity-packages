@@ -4,7 +4,7 @@ namespace MC.Core.Unity.Scenes
 {
     public class SceneFlowController : MonoBehaviour
     {
-        public void PushScene(SceneReferenceSO newScene)
+        public void PushScene(SceneReferenceSo newScene)
         {
             if (ValidateScene(newScene))
                 SceneStacker.Instance.PushScene(newScene.Name);
@@ -15,13 +15,13 @@ namespace MC.Core.Unity.Scenes
             SceneStacker.Instance.PopScene();
         }
 
-        public void ReplaceScene(SceneReferenceSO newScene)
+        public void ReplaceScene(SceneReferenceSo newScene)
         {
             if (ValidateScene(newScene))
                 SceneStacker.Instance.ReplaceScene(newScene.Name);
         }
 
-        private static bool ValidateScene(SceneReferenceSO scene)
+        private static bool ValidateScene(SceneReferenceSo scene)
         {
             if (scene != null && !string.IsNullOrEmpty(scene.Name)) return true;
             Debug.LogError("SceneFlowController: Invalid scene reference provided.");

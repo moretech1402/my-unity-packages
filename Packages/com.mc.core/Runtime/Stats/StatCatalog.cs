@@ -5,19 +5,19 @@ namespace MC.Core.Stats
 {
     public class StatCatalog : IStatCatalog
     {
-        private readonly Dictionary<StatId, StatDefinitionSo> _definitions;
+        private readonly Dictionary<StatId, IStatDefinition> _definitions;
 
-        public StatCatalog(IEnumerable<StatDefinitionSo> definitions)
+        public StatCatalog(IEnumerable<IStatDefinition> definitions)
         {
             _definitions = definitions.ToDictionary(d => d.Id);
         }
 
-        public IEnumerable<StatDefinitionSo> GetAll()
+        public IEnumerable<IStatDefinition> GetAll()
         {
             return _definitions.Values;
         }
 
-        public StatDefinitionSo Get(StatId id)
+        public IStatDefinition Get(StatId id)
         {
             return _definitions[id];
         }

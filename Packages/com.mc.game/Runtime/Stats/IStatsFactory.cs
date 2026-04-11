@@ -6,8 +6,8 @@ namespace MC.Game.Stats
 {
     public interface IStatsFactory
     {
-        IStatsHandler Create(StatsContainerSo statsContainerSo);
-        StatModifierEntry Create(StatModifierEntryData entryData);
-        StatModifierEntry[] Create(StatModifierEntryData[] datas);
+        IStatsHandler Create(IStatContainerDefinition statsContainer);
+        StatModifierEntry Create(IStatModifierEntryDefinition entryData);
+        StatModifierEntry[] Create(IStatModifierEntryDefinition[] datas);
     }
 }

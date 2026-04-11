@@ -10,7 +10,7 @@ namespace MC.Core.Unity.Scenes
 {
     public class SceneStacker : Singleton<SceneStacker>
     {
-        [SerializeField] private SceneReferenceSO[] initialSceneNames;
+        [SerializeField] private SceneReferenceSo[] initialSceneNames;
 
         // Events
         public event Action<string> OnScenePushed;
