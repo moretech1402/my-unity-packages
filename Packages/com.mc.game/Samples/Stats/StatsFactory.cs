@@ -29,6 +29,11 @@ namespace MC.Game.Stats
         {
             return datas.Select(Create).ToArray();
         }
+        
+        public StatModifierEntry[] CreateModifiers(IStatContainerDefinition container)
+        {
+            return new StatModifierEntry[] { }; // ...
+        }
 
         private static IStatSource CreateSource(IStatSourceDefinition definition, float value)
         {
