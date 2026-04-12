@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using MC.Core.Stats;
 using MC.Core.Stats.Calculation;
 using MC.Core.Stats.Modifiers;
+using MC.Core.Stats.Sources;
 
 namespace MC.Game.Stats
 {
@@ -21,12 +22,11 @@ namespace MC.Game.Stats
                 stat.AddModifier(modifier);
             }
         }
+        
         public void AddModifier(StatModifierEntry entry)
         {
-            if (Stats.TryGetValue(entry.StatId, out var stat))
-            {
-                stat.AddModifier(entry.Modifier);
-            }
+            GetOrCreateStat(entry.StatId)
+                .AddModifier(entry.Modifier);
         }
 
         public void AddModifiers(IEnumerable<StatModifierEntry> entries)
@@ -62,6 +62,16 @@ namespace MC.Game.Stats
         private Stat GetStat(StatId statId)
         {
             return Stats.GetValueOrDefault(statId);
+        }
+        
+        private Stat GetOrCreateStat(StatId statId)
+        {
+            if (Stats.TryGetValue(statId, out var stat))
+                return stat;
+            
+            var newStat = new Stat(new BaseStatSource(0f));
+            Stats[statId] = newStat;
+            return newStat;
         }
     }
 }
