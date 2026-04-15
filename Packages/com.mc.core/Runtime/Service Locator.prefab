@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1850217935412693402}
-  - component: {fileID: 3373877957723103025}
-  - component: {fileID: 8259305265538514417}
+  - component: {fileID: 4846649224362404498}
+  - component: {fileID: 6040724811415925944}
   m_Layer: 0
   m_Name: Service Locator
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3373877957723103025
+--- !u!114 &4846649224362404498
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,12 +42,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 679288218664851659}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42e5ecf30c094c54291ecb517f0b74b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 317298771e0c4544d82979919a1d6116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: com.mc.core::MC.Core.Unity.ServiceInitializerRunner
   serviceInitializers:
-  - {fileID: 8259305265538514417}
---- !u!114 &8259305265538514417
+  - {fileID: 6040724811415925944}
+--- !u!114 &6040724811415925944
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,6 +56,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 679288218664851659}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e1069f9f63f8f948b6ab844c9fc4a4f, type: 3}
+  m_Script: {fileID: 11500000, guid: 703d3f0f41c2e44458e507e2b38e9be7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: com.mc.core::MC.Core.Unity.CoreServicesInstaller

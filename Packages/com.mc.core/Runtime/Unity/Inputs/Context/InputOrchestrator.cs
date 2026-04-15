@@ -11,6 +11,7 @@ namespace MC.Core.Unity.Inputs.Context
 
         private void Awake()
         {
+            _eventBus = ServiceLocator.Get<IEventBus>();
             _eventBus.Subscribe<InputContextChangedEvent>(OnContextChanged);
         }
 
