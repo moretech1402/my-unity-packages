@@ -4,11 +4,6 @@ using UnityEngine.InputSystem;
 
 namespace MC.Core.Unity.Inputs.Context
 {
-    public struct InputContextChangedEvent
-    {
-        public InputContext Context;
-    }
-
     public sealed class InputOrchestrator : MonoBehaviour
     {
         [SerializeField] private PlayerInput playerInput;

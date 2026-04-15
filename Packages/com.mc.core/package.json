@@ -1,6 +1,6 @@
 {
   "name": "com.mc.core",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "displayName": "MoreC Core Framework",
   "unity": "6000.3",
   "description": "Reusable architecture base for my Unity projects",
