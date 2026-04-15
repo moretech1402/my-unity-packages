@@ -2,11 +2,6 @@ using UnityEngine;
 
 namespace MC.Core.Unity.Inputs.Context
 {
-    public interface IInputContextDefinition
-    {
-        InputContext Context { get; }
-    }
-
     [CreateAssetMenu(menuName = "Core/Unity/Input/Create new Input Context")]
     public class InputContextSo : ScriptableObject, IInputContextDefinition
     {
