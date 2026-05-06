@@ -9,8 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1850217935412693402}
-  - component: {fileID: 4846649224362404498}
-  - component: {fileID: 6040724811415925944}
+  - component: {fileID: 2232303839860946140}
   m_Layer: 0
   m_Name: Service Locator
   m_TagString: Untagged
@@ -30,10 +29,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5563296580542809450}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4846649224362404498
+--- !u!114 &2232303839860946140
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,20 +42,52 @@ MonoBehaviour:
   m_GameObject: {fileID: 679288218664851659}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 317298771e0c4544d82979919a1d6116, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a72ed69af740f841829d6377dc630ce, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: com.mc.core::MC.Core.Unity.ServiceInitializerRunner
+  m_EditorClassIdentifier: Assembly-CSharp::MC.Core.Unity.ServiceInitializerRunner
   serviceInitializers:
-  - {fileID: 6040724811415925944}
---- !u!114 &6040724811415925944
+  - {fileID: 6262859122065996672}
+--- !u!1 &2806891506067537324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5563296580542809450}
+  - component: {fileID: 6262859122065996672}
+  m_Layer: 0
+  m_Name: Core Services
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5563296580542809450
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2806891506067537324}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1850217935412693402}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6262859122065996672
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 679288218664851659}
+  m_GameObject: {fileID: 2806891506067537324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 703d3f0f41c2e44458e507e2b38e9be7, type: 3}
+  m_Script: {fileID: 11500000, guid: 8713b0bbe96b48c4eb86c35658e2101b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: com.mc.core::MC.Core.Unity.CoreServicesInstaller
+  m_EditorClassIdentifier: Assembly-CSharp::MC.Core.Unity.CoreServicesInstaller

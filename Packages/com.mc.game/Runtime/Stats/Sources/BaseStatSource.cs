@@ -9,7 +9,7 @@ namespace MC.Core.Stats.Sources
             _value = value;
         }
 
-        public float GetValue(IStatsHandler stats)
+        public float GetValue(IStatSourceContext stats)
         {
             return _value;
         }

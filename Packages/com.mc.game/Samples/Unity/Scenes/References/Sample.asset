@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81e631d45895fee48a5085b43d35109e, type: 3}
   m_Name: Sample
   m_EditorClassIdentifier: Assembly-CSharp::MC.Core.Unity.Scenes.SceneReferenceSO
-  Name: SampleScene
+  _name: SampleScene

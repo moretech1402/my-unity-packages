@@ -7,7 +7,7 @@ namespace MC.Game.Stats.Sources
         fileName = "Base Stat Source",
         menuName = "Game/Stats/Sources/Create new Base Stat Source", order = 0)
     ]
-    public class BaseStatSourceSo : StatSourceSo
+    public class BaseStatSourceSo : StatSourceSo, IStatSourceDefinition
     {
         [SerializeField] private float _defaultValue;
         

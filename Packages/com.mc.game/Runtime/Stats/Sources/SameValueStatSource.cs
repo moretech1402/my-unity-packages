@@ -12,9 +12,9 @@ namespace MC.Game.Stats.Sources
             _statIdRef = statIdRef;
         }
         
-        public float GetValue(IStatsHandler stats)
+        public float GetValue(IStatSourceContext context)
         {
-            return stats.Get(_statIdRef, StatCalculationCatalog.Final);
+            return context.StatsHandler.Get(_statIdRef, StatCalculationCatalog.Final);
         }
     }
 }
